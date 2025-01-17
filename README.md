@@ -1,9 +1,17 @@
-# LLM_tutorials_and_knowledge
+## Notes on MLOps and LLM topics
 
-This Repository is a learning excercise to discusses the important topics in LLM and NLP domain.
+This Repository is a learning excercise to make notes and discuss the important topics in MLOps and LLM (and NLP).
 
-Topics covered:
+### Topics covered:
 
+#### MLOps Notes
+- CI/CD pipelines for ML applications.
+- ML Model deploymnet overview notes
+
+#### NLP Notes
+- NLP fundamentals.
+
+#### LLM Notes
 - LLM Architectures
 - LLM training
 - LLM optimization and adaptation
