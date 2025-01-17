@@ -1,4 +1,4 @@
-## CI/CD pipeline for ML Applications
+## CI/CD pipelines for ML Applications
 
 CI/CD pipline basically handles intergration of data piepline, models and applications, and deploy to desired environmnet while handling infrastructure so the ML application can run smoothly according to requirements defined without manual involvement of integration and deployment steps.
 
@@ -22,4 +22,13 @@ Best practises: reproducability, testing, monitoring and collabarion
 
 ### Continous Deployment (CD)
 
-CD handles deploying the application (inclduing model and other components) to serving infrastructure or prduction enviromnet like AWS (EC2 instand or Lambda) while maintaining scalability. Furthermore, ML applications demand additional infrastructure requiruemnts like computational resources managament and performance monitering for efficient and scalable deployment.
+CD handles deploying the application (inclduing model and other components) to serving infrastructure or prduction enviromnet while maintaining scalability. Furthermore, ML applications demand additional infrastructure requiruemnts like computational resources managament and performance monitering for efficient and scalable deployment.
+
+- Deploymnet stratergies: Batch inference, real-time inference and edge (device) deployment.
+- Infrastructure: 
+    - Local/inhouse servers (for sensitive data) or Cloud based like AWS (EC2, Lambda and Sagemaker).
+    - Hardware: Computational requirements and demand over scale for ML applications.
+    - Infrastructure as Code (IaC): Automate infrastructure provisoning and configaration for consisting deployment, scalability (resources) and reproducability (over environmnets). (e.g. Terraform)
+    - Orchestration and scaling to handle workloads and load balancing (Kubernetes).
+    - Monitering the application and model using metrics and visualization (Prometheus and Grafana).
+
