@@ -1,4 +1,4 @@
-## There are multiple ways to serve a model
+## Deplying ML model
 
 ### General Workflow:
 1. Setup an application (FastAPI or/and Docker) or use a tool/framework (MLflow) to serve the model.
@@ -40,7 +40,7 @@
 MLflow provides built-in functionality to serve ML model via REST API (use minimal codes). Advantages: MLflow simpliifies the model versioning and expermiment tracking and supports remote model deployment (AWS). Limitations: MLflow model serving cannot be handled with additional processing logic and limited customization (compared to FastAPI).
 
 - Train the ML model and log the experiment in MLflow (experiment tracking and model versioning)
-- Register model in MLflow: Organize (versioning and manage) and store trained models in Model Regisrty and utilize them in the ML lifecycle (prodcution ready model)
+- Register model in MLflow: Organize (versioning and manage) and store trained models artifacts (use model name and version) in Model Regisrty and transition of the model to a specific stage in the ML lifecycle (e.g. prodcution)
 - Serve/deploy the model using `MLflow model serve` in local/remote server and expose the mode via REST API endpoint (e.g. `http://<server-ip>:5000/invocations`)
     ```bash 
     mlflow models serve -m "models:/MyModel/1" --host 0.0.0.0 --port 5000
@@ -64,10 +64,6 @@ MLflow provides built-in functionality to serve ML model via REST API (use minim
 - Deploying MLflow in cloud to serve model:
     - Use Docker to containerize MLflow model serving: includes model artifact transferring and running model serve command in docker file (e.g. `CMD ["mlflow", "models", "serve", "-m", "models:/MyModel/1", "--host", "0.0.0.0", "--port", "5000"]`).
     - Deploy the container on cloud (build and run) and expose the `/invocation` endpoint for extrenal access (inference with a client app).
-
-
-    Questions: MLflow model regsitering. serve model with MLflow from cloud env(aws)
-
 
 
 
