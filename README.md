@@ -7,6 +7,7 @@ This Repository is a learning excercise to make notes and discuss the important 
 #### MLOps Notes
 - CI/CD pipelines for ML applications.
 - ML Model deploymnet overview notes
+- Feature engineering
 
 #### NLP Notes
 - NLP fundamentals.
