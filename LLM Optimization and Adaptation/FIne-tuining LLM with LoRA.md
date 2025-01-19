@@ -27,7 +27,7 @@ $A$ and $B$ be are two small matrices with size of $r \times d$ and $d \times r$
 - This makes a the total number of trainable parameters: $ 1000 \times 16 + 16 \times 1000 = 32000$, which is way less than compared to 1 million paramters from $W$ (~3.2%).
 - We train $A$ and $B$ on the new data and the wegith update for the model with LoRA: $W_{new} = W_{original} + A \cdot B$
 
-#### LoRA in Transformer layers in LLM
+#### LoRA in Transformer layers in LLM (example)
 
 In transformer based LLMs (GPT and Llama), Lora typically applied to attention layers: Query ($W_Q$) and Key ($W_K$) projection metrices:
 
