@@ -15,5 +15,5 @@ This Repository is a learning excercise to make notes and discuss the important 
 #### LLM Notes
 - LLM Architectures
 - LLM training
-- LLM optimization and adaptation
+- LLM optimization and adaptation (LoRA)
 - Multi Modal LLMs

@@ -18,16 +18,30 @@ LoRA introduces $A$ and $B$ low rank matrices which makes up (or approximate) th
 
 $A$ and $B$ be are two small matrices with size of $r \times d$ and $d \times r$, respectively, where $r$ is the ranking parameter for the approximation ($r << d$). The $r$ controls how much the model should adapt to the new task. Smaller $r$ means less parameters to train but limits the expressiveness.
 
-Example Scenario:
+#### Example Scenario:
 
 - Imagine a LLM model has 1 million parameters version, which means $W: 1000 \times 1000 $ matrix ($d=1000$).
-- Apply LoRA with $r =16$ whih means:
+- Apply LoRA with $r =16$ which means:
     - $A: 1000 \times 16$
     - $B: 16 \times 1000$
 - This makes a the total number of trainable parameters: $ 1000 \times 16 + 16 \times 1000 = 32000$, which is way less than compared to 1 million paramters from $W$ (~3.2%).
 - We train $A$ and $B$ on the new data and the wegith update for the model with LoRA: $W_{new} = W_{original} + A \cdot B$
 
+#### LoRA in Transformer layers in LLM
 
+In transformer based LLMs (GPT and Llama), Lora typically applied to attention layers: Query ($W_Q$) and Key ($W_K$) projection metrices:
+
+Attention = softmax $(Q \cdot K^T) \cdot V$, where $Q = W_Q \cdot x$ and $K = W_K \cdot x$
+
+When LoRA is applied:
+
+$W\rq_Q = W_Q + A_Q \cdot B_Q$
+
+$W\rq_K = W_K + A_K \cdot B_K$
+
+During training $A_Q, B_Q, A_K$ and $B_K$ are trained.
+
+### Practical sceanrio: please find the LoRA example for how to train a LLM on custom dataset [here](./finetune_with_LoRA_on_custom_dataset.ipynb)
 
 
 
