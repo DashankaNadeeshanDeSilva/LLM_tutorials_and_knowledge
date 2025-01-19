@@ -1,6 +1,6 @@
 ## Notes on MLOps and LLM topics
 
-This Repository is a learning excercise to make notes and discuss the important topics in MLOps and LLM (and NLP).
+This Repository containes notes and discuss the important topics in MLOps and LLMs (and NLP) that created as a learning excercise. Please feel free to make a use of it and point out if there any issues.
 
 ### Topics covered:
 
