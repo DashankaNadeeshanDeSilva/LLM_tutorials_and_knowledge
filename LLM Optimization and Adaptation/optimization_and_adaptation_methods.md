@@ -20,7 +20,7 @@ These techniques reduce the computational or memory requirements of LLMs:
 
 - Knowledge Distillation: Training a smaller "student model" to replicate the behavior of a larger "teacher model," enabling lightweight deployments while retaining most of the teacher's performance.
 
-3. Zero-Shot and Few-Shot Learning: Use the model without re-training for inference by providing few or no examples/instructions in the input. In LLM domain these examples or instrcutions can be provided with the prompt.
+3. Zero-Shot and Few-Shot Learning: Use the model without re-training for inference by providing few or no examples/instructions in the input. In LLM domain these examples or instrcutions can be provided with the prompt. In terms of zero-shot learning, the LLM is expected to be pre-trained on diverse knowledge and instructions across domains
 
 4. Deployment and Inference Optimization
 Techniques to improve efficiency during deployment and inference:
