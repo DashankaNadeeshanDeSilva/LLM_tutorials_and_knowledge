@@ -1,26 +1,26 @@
 ## LLM optimization and adaptation
 
-LLMs are pre=trained on vast amount of data for general purpose objectives. To transform these models for efficient, small in size or less computationally expensive and work on a specific application/task or domain specific, optimiazation and adaptation techniques are uesd.
+LLMs are pre-trained on vast amounts of data for general-purpose objectives. To transform these models for efficiency, small in size or less computationally expensive and work on a specific application/task or domain-specific, optimization and adaptation techniques are used.
 
 1. Model Fine-Tuning and Adaptation
 These methods adapt a pre-trained model to specific tasks or domains:
 
-- Fine-Tuning: Training a pre-trained LLM on a smaller, task-specific dataset to refine its behavior for that domain (e.g., ChatGPT fine-tuned for customer support).
+- Fine-Tuning: Training a pre-trained LLM on a smaller, task-specific dataset to refine its behaviour for that domain (e.g., ChatGPT fine-tuned for customer support).
 
 - LoRA (Low-Rank Adaptation) and Adapters: Parameter-efficient fine-tuning methods that modify only small, task-specific layers while keeping the majority of the model frozen.
 
-- Prompt-Tuning and Prefix-Tuning: Techniques that adapt a model's behavior by learning task-specific prompts or token prefixes without modifying the main model weights.
+- Prompt-Tuning and Prefix-Tuning: Techniques that adapt a model's behaviour by learning task-specific prompts or token prefixes without modifying the main model weights.
 
 2. Model Compression and Optimization
 These techniques reduce the computational or memory requirements of LLMs:
 
-- Quantization: Reducing the precision of model weights (e.g., represnt the model with fewer bits such as transform from 32-bit floating-point to 8-bit integers) to decrease memory usage and improve inference speed with minimal accuracy loss.
+- Quantization: Reducing the precision of model weights (e.g., representing the model with fewer bits such as transforming from 32-bit floating-point to 8-bit integers) to decrease memory usage and improve inference speed with minimal accuracy loss.
 
-- Pruning: Removing less important/reundent parameters or connections in the model to reduce its size and computation without significantly degrading performance.
+- Pruning: Removing less important/redundant parameters or connections in the model to reduce its size and computation without significantly degrading performance.
 
-- Knowledge Distillation: Training a smaller "student model" to replicate the behavior of a larger "teacher model," enabling lightweight deployments while retaining most of the teacher's performance.
+- Knowledge Distillation: Training a smaller "student model" to replicate the behaviour of a larger "teacher model," enabling lightweight deployments while retaining most of the teacher's performance.
 
-3. Zero-Shot and Few-Shot Learning: Use the model without re-training for inference by providing few or no examples/instructions in the input. In LLM domain these examples or instrcutions can be provided with the prompt. In terms of zero-shot learning, the LLM is expected to be pre-trained on diverse knowledge and instructions across domains
+3. Zero-Shot and Few-Shot Learning: Use the model without re-training for inference by providing few or no examples/instructions in the input. In the LLM domain these examples or institutions can be provided with the prompt. In terms of zero-shot learning, the LLM is expected to be pre-trained on diverse knowledge and instructions across domains
 
 4. Deployment and Inference Optimization
 Techniques to improve efficiency during deployment and inference:
